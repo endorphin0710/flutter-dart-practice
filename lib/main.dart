@@ -1,26 +1,16 @@
+import 'package:first_app/dice_roller.dart';
 import 'package:flutter/material.dart';
+
+import 'gradient_container.dart';
 
 void main() {
   runApp(
-    MaterialApp(
+    const MaterialApp(
       home: Scaffold(
-        body: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              colors: [Colors.deepPurple, Colors.deepPurpleAccent],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            ),
-          ),
-          child: const Center(
-            child: Text(
-              "Hello World!",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 28,
-              ),
-            ),
-          ),
+        body: GradientContainer(
+          Colors.deepPurple,
+          Colors.deepPurpleAccent,
+          content: DiceRoller(),
         ),
       ),
     ),
